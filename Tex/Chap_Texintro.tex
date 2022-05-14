@@ -1,0 +1,80 @@
+\chapter{模板文件介绍}\label{chap:texintro}
+
+基于文件分类管理原则便于修改与操作的属性，本模板对sudathesis的框架和文件体系进行分类系统管理。对于初次使用者，\LaTeX{}编译后的众多的文件目录不知所云，在阅读完模板文件介绍后，将会轻松使用。除此之外，\LaTeX{}的使用方法可以通过阅读相关资料如\LaTeX{} Wikibook \citep{wikibook2014latex} 增添使用技巧。
+
+
+\section{安装与操作}
+
+\begin{enumerate}
+    \item 安装软件：根据所用操作系统和章节~\ref{sec:system}中的信息安装\LaTeX{}编译环境。
+    \item 获取模板：下载 \href{https://github.com/sudathesis/sudathesis}{\texttt{sudathesis}} 模板并解压。sudathesis模板不仅提供了相应的类文件，同时也提供了包括参考文献等在内的完成学位论文的一切要素，所以，下载时，推荐下载整个sudathesis文件夹，而不是单独的文档类。
+    \item 编译模板：
+        \begin{enumerate}
+            \item Windows：双击运行artratex.bat脚本。
+            \item Linux或MacOS: { \verb|terminal| -> \verb|chmod +x ./artratex.sh| -> \verb|./artratex.sh xa|}
+            \item \color{red}任意系统：都可使用\LaTeX{}编辑器打开Thesis.tex文件并选择xelatex编译引擎进行编译。\\
+            具体编译流程为 Xelatex -> Bibtex -> Xelatex -> Xelatex，即后文所提方法。
+        \end{enumerate}
+    \item 错误处理：若编译中遇到了问题，请先查看“常见问题”（章节~\ref{sec:qa}）。
+\end{enumerate}
+
+编译完成即可获得本PDF说明文档。而这也完成了学习使用sudathesis撰写论文的一半进程。
+
+\section{文档目录简介}
+
+\subsection{Thesis.tex}
+
+Thesis.tex为主文档，其设计和规划了论文的整体框架，通过对其的阅读可以了解整个论文框架的搭建。
+
+\subsection{编译脚本}
+
+\begin{itemize}
+    \item Windows：双击Dos脚本artratex.bat可得全编译后的PDF文档，其存在是为了帮助不了解\LaTeX{}编译过程的初学者跨过编译这第一道坎，请勿通过邮件传播和接收此脚本，以防范Dos脚本的潜在风险。
+    \item Linux或MacOS：在terminal中运行
+        \begin{itemize}
+            \item \verb|./artratex.sh xa|：获得全编译后的PDF文档
+            \item \verb|./artratex.sh x|：快速编译，不会生成文献引用
+        \end{itemize}
+\end{itemize}
+
+全编译指运行 \verb|Xelatex+Bibtex+Xelatex+Xelatex| 以正确生成所有的引用链接，如目录，参考文献及引用等。在写作过程中若无添加新的引用，则可用快速编译，即只运行一遍\LaTeX{}编译引擎以减少编译时间。
+
+\subsection{Tmp文件夹}
+
+运行编译脚本后，编译所生成的文档皆存于Tmp文件夹内，包括编译得到的PDF文档，其存在是为了保持工作空间的整洁，因为好的心情是很重要的。
+
+\subsection{Style文件夹}
+
+包含ucasthesis文档类的定义文件和配置文件，通过对它们的修改可以实现特定的模版设定。
+
+\begin{enumerate}
+    \item sudathesis.cls：文档类定义文件，论文的最核心的格式即通过它来定义的。
+    \item sudathesis.cfg：文档类配置文件，设定如目录显示为“目~录”而非“目录”。
+    \item artratex.sty: 常用宏包及文档设定，如参考文献样式、文献引用样式、页眉页脚设定等。这些功能具有开关选项，常只需在Thesis.tex中进行启用即可，一般无需修改artratex.sty本身。
+    \item artracom.sty：自定义命令以及添加宏包的推荐放置位置。
+\end{enumerate}
+
+\subsection{Tex文件夹}
+
+文件夹内为论文的所有实体内容，正常情况下，这也是\textbf{使用sudathesis撰写学位论文时，主要关注和修改的一个位置，注：所有文件都必须采用UTF-8编码，否则编译后将出现乱码文本}，详细分类介绍如下：
+
+\begin{itemize}
+    \item Frontinfo.tex：为论文中英文封面信息。\textbf{论文封面会根据英文学位名称如Bachelor，Master，Doctor, Postdoctor 自动切换为相应的格式}。
+    \item Frontmatter.tex：为论文前言内容如中英文摘要等。
+    \item Mainmatter.tex：索引需要出现的Chapter。开始写论文时，可以只索引当前章节，以快速编译查看，当论文完成后，再对所有章节进行索引即可。
+    \item Chap{\_}xxx.tex：为论文主体的各章，可根据需要添加和撰写。\textbf{添加新章时，可拷贝一个已有的章文件再重命名，以继承文档的 UTF8 编码}。
+    \item Appendix.tex：为附录内容。
+    \item Backmatter.tex：为发表文章信息和致谢部分等。
+\end{itemize}
+
+\subsection{Img文件夹}
+
+用于放置论文中所需要的图类文件，支持格式有：.eps, .jpg, .png, .pdf。其中，\verb|logo.png|苏州大学校徽、\verb|name.png|苏州大学校名图片格式。若图片众多，也可为各章节图片建立子目录；但若命名规则合理，图片查询亦是十分方便。
+
+\subsection{Biblio文件夹}
+
+\begin{enumerate}
+    \item ref.bib：参考文献信息库。
+\end{enumerate}
+
+

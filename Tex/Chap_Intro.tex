@@ -1,0 +1,40 @@
+\chapter{引言}\label{chap:introduction}
+
+\section{研究背景}
+
+多数的苏州大学毕业生在毕业论文排版时选择临时寻找\LaTeX{}模板进行修改，需要耗费不必要的研究修改时间。同时，各类模板修改难易程度不同，效果差异大。在发现中国科学院大学ucasthesis(莫晃锐版)\LaTeX{}模板的优异性后，对其修改适配于苏州大学学位论文编写格式要求，其中大部分底层代码和逻辑继承前者。
+
+当前sudathesis模板满足最新的苏州大学学位论文撰写要求和封面设定。兼顾操作系统：Windows，Linux，MacOS和\LaTeX{}编译引擎：pdflatex，xelatex，lualatex。支持中文书签、中文渲染、中文粗体显示、拷贝PDF中的文本到其他文本编辑器等特性。此外，对模板的文档结构进行了精心设计，撰写了编译脚本提高模板的易用性和使用效率。
+
+sudathesis的目标节省多数人修改\LaTeX{}模板时间，提高学位论文的撰写速度。 同时，sudathesis继承了ucasthesis模板整洁一致的代码结构和扼要的注解。
+
+因为\LaTeX{}使用经验和涉猎层次不一，sudathesis基于\LaTeX{}格式与内容分离的特色，封装底层排版代码，设置简单的接口，降低使用难度，提升使用舒适度。对于初学者而言，使用此模板撰写学位论文本质上不存在技术性的困难。同时，针对\LaTeX{}撰写论文的一些主要难题，如制图、制表、文献索引等，将结合使用情况进行了详细说明，并提供了相应的代码替换方案，具体将在后续章节中进行阐述。
+
+
+\section{系统要求}\label{sec:system}
+
+\href{https://github.com/sudathesis/sudathesis}{\texttt{sudathesis}} 宏包可以在目前主流的 \href{https://en.wikibooks.org/wiki/LaTeX/Introduction}{\LaTeX{}} 编译系统中使用，如\TeX{}Live和MiK\TeX{}。因C\TeX{}套装已停止维护，\textbf{不再建议使用} （请勿混淆C\TeX{}套装与ctex宏包。C\TeX{}套装是集成了许多\LaTeX{}组件的\LaTeX{}编译系统。 \href{https://ctan.org/pkg/ctex?lang=en}{ctex} 宏包如同sudathesis，是\LaTeX{}命令集，其维护状态活跃，并被主流的\LaTeX{}编译系统默认集成，是几乎所有\LaTeX{}中文文档的核心架构）。推荐的 \href{https://en.wikibooks.org/wiki/LaTeX/Installation}{\LaTeX{}编译系统} 和 \href{https://en.wikibooks.org/wiki/LaTeX/Installation}{\LaTeX{}文本编辑器} 为
+\begin{center}
+    \begin{tabular}{lcc}
+        \hline
+        操作系统 & \LaTeX{}编译系统 & \LaTeX{}文本编辑器\\
+        \hline
+        Linux & \href{https://www.tug.org/texlive/acquire-netinstall.html}{\TeX{}Live Full} & \href{http://texstudio.sourceforge.net/}{TeXstudio} 或 Vim\\
+        MacOS & \href{https://www.tug.org/mactex/}{Mac\TeX{} Full} & \href{http://texstudio.sourceforge.net/}{TeXstudio} 或 \href{https://www.texpad.com/}{Texpad for Mac}\\
+        Windows & \href{https://www.tug.org/texlive/acquire-netinstall.html}{\TeX{}Live Full} 或 \href{https://miktex.org/download}{MiK\TeX{}} & \href{http://texstudio.sourceforge.net/}{TeXstudio}\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\LaTeX{}编译系统，如\TeX{}Live（Mac\TeX{}为针对MacOS的\TeX{}Live)，用于提供编译环境，\LaTeX{}文本编辑器 (如Texmaker) 用于编辑\TeX{}源文件。请从各软件官网下载安装程序，勿使用不明程序源。\textbf{\LaTeX{}编译系统和\LaTeX{}编辑器分别安装成功后，即完成了\LaTeX{}的系统配置}，无需其他手动干预和配置。若系统原带有旧版的\LaTeX{}编译系统并想安装新版，请\textbf{先卸载干净旧版再安装新版}。
+
+\section{问题反馈}
+
+sudathesis基于ucasthesis对苏州大学毕业论文要求进行排版适配，未对底层逻辑和代码进行大篇幅修改，因此大多数常见问题可以前往ucasthesis的 \href{https://github.com/mohuangrui/ucasthesis/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98}{问题反馈} 查看。
+对于修改的sudathesis模板中出现的问题可以反馈至\href{https://github.com/sudathesis/sudathesis/issues}{sudathesis Issues}，在力所能及的情况下将及时修改完善。
+
+\section{模板下载}
+
+\begin{center}
+    \href{https://github.com/sudathesis/sudathesis}{Github/sudathesis}: \url{https://github.com/sudathesis/sudathesis}
+\end{center}
