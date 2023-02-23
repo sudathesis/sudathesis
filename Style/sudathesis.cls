@@ -396,9 +396,9 @@
        \zihao{-4}
 
     \vspace*{-2.8cm}
-    \hspace{26em}
+    \hspace{20.5em}
     \parbox{5\ccwd}{{\sffamily\zihao{-4} \suda@label@ch@schoolid}} {\zihao{-4} {\suda@value@ch@schoolid}} \par
-    \hspace{24.5em}
+    \hspace{23.5em}
     \parbox{5\ccwd}{{\sffamily\zihao{-4} \suda@label@ch@classid}} {\zihao{-4} {\suda@value@ch@classid}} \par
 
 
